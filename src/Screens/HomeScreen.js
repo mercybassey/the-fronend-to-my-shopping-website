@@ -9,6 +9,7 @@ function HomeScreen (props) {
     useEffect(() => {
         const fetchData = async () => {
             const { data } = await axios.get('http://localhost:5002/api/products');
+            console.log(data);
             setProduct(data);
         }
         fetchData();
